@@ -1,6 +1,6 @@
 
 .menu 
-    border: 2px solid red  
+    //border: 2px solid red  
     display: none
     position: absolute
     left: 0
@@ -8,6 +8,9 @@
     top: 100%
     height 100vh
     background: rgba(47, 53, 79, .9)
+    transform translateY(-50px)
+    transition .3s transform, .3s opacity
+    will-change transform
     ul  
         padding: 0
         list-style none
@@ -30,23 +33,20 @@
         letter-spacing: 2.2px
     
     &-open  
-        border: 1px solid red   
+        //border: 1px solid red   
         user-select none
         width: 40px
         height 40px
         display: inline-flex
         cursor pointer
         background: url('../images/icon-hamburger.svg') no-repeat center
+
+    
     &-checkbox 
-       display: none
-        &:checked  
-            & ~ .menu-open
-                border: 1px solid blue  
-            & ~ .header 
-                background: rgba(47, 53, 79, .9)
-                & .menu 
-                    border: 1px solid red       
-                    display: block
+       display: none 
+        
+
+    
                     
                        
     
