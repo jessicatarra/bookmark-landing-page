@@ -1,0 +1,53 @@
+
+.menu 
+    border: 2px solid red  
+    display: none
+    position: absolute
+    left: 0
+    right 0
+    top: 100%
+    height 100vh
+    background: rgba(47, 53, 79, .9)
+    ul  
+        padding: 0
+        list-style none
+    li      
+        border-top: 1px solid var(--grayishBlue)
+        &:last-child
+            a   
+                border: 2px solid white  
+                margin-top: 1em  
+                border-radius: 5px
+                padding: .7em
+    a  
+        color: white        
+        text-decoration: none
+        text-transform: uppercase
+        //border: 1px solid red   
+        display: block
+        text-align: center
+        padding: 1em
+        letter-spacing: 2.2px
+    
+    &-open  
+        border: 1px solid red   
+        user-select none
+        width: 40px
+        height 40px
+        display: inline-flex
+        cursor: pointer
+        background: url('../images/icon-hamburger.svg') no-repeat center
+    &-checkbox 
+       display: none
+        &:checked  
+            & ~ .menu-open
+                border: 1px solid blue  
+            & ~ .header 
+                background: rgba(47, 53, 79, .9)
+                & .menu 
+                    border: 1px solid red       
+                    display: block
+                    
+                       
+    
+
