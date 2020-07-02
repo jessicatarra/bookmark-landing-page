@@ -216,6 +216,9 @@
   font-size: 1em;
   outline: 0;
 }
+.join .form .u-button {
+  margin: 0;
+}
 .footer {
   background: var(--veryDarkBlue);
   text-align: center;
@@ -301,6 +304,7 @@ ul {
   border: none;
   cursor: pointer;
   box-shadow: 0 5px 10px -4px var(--softBlue);
+  -webkit-appearance: none;
 }
 .u-button:first-of-type {
   margin: 0;
