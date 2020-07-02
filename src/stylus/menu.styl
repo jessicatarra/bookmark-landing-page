@@ -52,6 +52,34 @@
             text-align: center
             padding: 1em
             letter-spacing: 2px
+
+    @media screen and (min-width: 1024px)
+        transform: translateY(0)
+        visibility: visible
+        opacity: 1
+        position: initial 
+        height auto
+        background: initial 
+        &-open
+            display: none 
+        ul  
+            display: flex
+            li  
+                border: none 
+                &:last-child
+                    a   
+                        border: none 
+                        border: 2px solid white  
+                        margin-top: 0  
+                        border-radius: .5px
+                        padding: .7em 2em 
+                        background: var(--softRed)
+                        color: white
+                        margin-left: 2em
+            a
+                color var(--veryDarkBlue)
+                border: none 
+
     
     
 
