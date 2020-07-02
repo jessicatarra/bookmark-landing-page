@@ -1,8 +1,9 @@
 
 .menu 
-    //border: 2px solid red  
-    display: none
     position: absolute
+    visibility: hidden
+    position: absolute
+    opacity 0
     left: 0
     right 0
     top: 100%
@@ -11,42 +12,50 @@
     transform translateY(-50px)
     transition .3s transform, .3s opacity
     will-change transform
-    ul  
-        padding: 0
-        list-style none
-    li      
-        border-top: 1px solid var(--grayishBlue)
-        &:last-child
-            a   
-                border: 2px solid white  
-                margin-top: 1em  
-                border-radius: 5px
-                padding: .7em
-    a  
-        color: white        
-        text-decoration: none
-        text-transform: uppercase
-        //border: 1px solid red   
-        display: block
-        text-align: center
-        padding: 1em
-        letter-spacing: 2.2px
-    
     &-open  
-        //border: 1px solid red   
         user-select none
         width: 40px
         height 40px
         display: inline-flex
         cursor pointer
         background: url('../images/icon-hamburger.svg') no-repeat center
-
-    
     &-checkbox 
-       display: none 
-        
+        display: none 
+        &:checked
+            & ~ .header
+                background: rgba(47, 53, 79, .9)
+                .menu-open
+                    background-image url('../images/icon-close.svg')
+                & .header-logo
+                    background-image: url('../images/logo-bookmark-white.svg')
+                & .menu
+                    transform translateY(0)
+                    visibility visible
+                    opacity 1
 
+        
+    ul  
+        li
+            list-style none    
+            border-top: 1px solid var(--grayishBlue)
+            &:last-child
+                a   
+                    border: 2px solid white  
+                    margin-top: 1em  
+                    border-radius: 5px
+                    padding: .7em
+        a  
+            color: white        
+            text-decoration: none
+            text-transform: uppercase 
+            display: block
+            text-align: center
+            padding: 1em
+            letter-spacing: 2px
     
+    
+
+
                     
                        
     

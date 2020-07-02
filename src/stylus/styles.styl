@@ -3,6 +3,9 @@
 @import './features.styl'
 @import './download.styl'
 @import './questions.styl'
+@import './join.styl'
+@import './footer.styl'
+
 
 
 
@@ -36,6 +39,11 @@ ul
 .u-h2
     @extends .u-h1
     font-size: 1.5em
+
+.u-h4 
+    @extends .u-h1
+    font-size 1.3em 
+    margin-top: .5em 
 .u-p
     color: var(--grayishBlue)
     line-height: 1.8
@@ -54,6 +62,9 @@ ul
     box-shadow: 0 5px 10px -4px var(--softBlue)
     &:first-of-type
         margin: 0
+    &.is-red
+        background: var(--softRed)
+        color: #f7f7f7 
     &.is-gray
         color var(--veryDarkBlue)
         background: #f7f7f7
